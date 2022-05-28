@@ -1,7 +1,7 @@
 var calendar = document.querySelector(".app-calendar")
 // console.log(calendar)
 
-//Function to Highlight Weekends
+//If day is a Weekend, add class .weekend 
 var isWeekend = day => {
     // 0 when it's Sunday, 6 when its Saturday
    return day % 7 === 6 || day % 7 === 0
@@ -29,6 +29,12 @@ for (let day = 1; day <= 31; day++){
     
 }
 
-
-
+// Add Click Event to all days, add class .selected
+document.querySelectorAll(".app-calendar .day").forEach
+(day => {
+    console.log(day)
+    day.addEventListener("click", function(event) {
+        event.currentTarget.classList.toggle("selected");
+    });
+});
 
