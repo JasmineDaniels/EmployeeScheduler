@@ -13,6 +13,17 @@ body{
     padding-bottom: 5px;
 }
 
+.month{
+    border: 1px solid var(--N-A);
+    height: 100px;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightblue);
+
+}
+
 .day {
     border-bottom: 1px solid var(--N-A);
     border-right: 1px solid var(--N-A);
@@ -38,4 +49,13 @@ body{
 .selected {
     background-color: var(--lightblue);
     color: white;
+}
+
+.hour{
+    border: 1px solid var(--N-A);;
+    text-align: start;
+    padding-top: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 200ms, color 200ms;
 }

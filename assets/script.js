@@ -1,5 +1,5 @@
 var calendar = document.querySelector(".app-calendar")
-// console.log(calendar)
+var hours = document.querySelector(".hours")
 
 //If day is a Weekend, add class .weekend 
 var isWeekend = day => {
@@ -15,6 +15,15 @@ var getDayName = day => {
     return dayName
 }
 
+
+for (let hour = 0; hour <= 12; hour++){
+    console.log(hour)
+    hours.insertAdjacentHTML("beforeend", `<div 
+    class= "hour">${hour}</div>`);
+    hours.insertAdjacentHTML("beforebegin", `<div 
+    class= "hour">${hour}</div>`)
+}
+
 for (let day = 1; day <= 31; day++){
     // console.log(day)
     const weekend = isWeekend(day);
@@ -26,7 +35,6 @@ for (let day = 1; day <= 31; day++){
     }
     calendar.insertAdjacentHTML("beforeend", `<div 
     class= "day ${weekend ? "weekend" : ""}">${insertName}${day}</div>`);
-    
 }
 
 // Add Click Event to all days, add class .selected
